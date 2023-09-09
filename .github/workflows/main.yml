@@ -15,6 +15,7 @@ jobs:
         port: ${{ secrets.ftp_port }}
         username: ${{ secrets.ftp_user }}
         password: ${{ secrets.ftp_password }}
+        local-dir: data/ttt/maps/
         server-dir: garrysmod/data/ttt/maps/
         dry-run: true
         log-level: standard
