@@ -14,12 +14,12 @@ jobs:
     - name: send latest files
       uses: milanmk/actions-file-deployer@master
       with:
-        remote-protocol: sftp
+        remote-protocol: "sftp"
         remote-host: ${{ secrets.ftp_server }}
         remote-port: ${{ secrets.ftp_port }}
         remote-user: ${{ secrets.ftp_user }}
         remote-password: ${{ secrets.ftp_password }}
         webhook:  ${{ secrets.webhook_url }}
-        local-path: data/ttt/maps/
-        remote-path: garrysmod/data/ttt/maps/
+        local-path: "/data/ttt/maps/"
+        remote-path: "/garrysmod/data/ttt/maps/"
         
