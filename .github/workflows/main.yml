@@ -14,6 +14,7 @@ jobs:
     - name: send latest files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
+        remote-protocol: sftp
         server: ${{ secrets.ftp_server }}
         port: ${{ secrets.ftp_port }}
         username: ${{ secrets.ftp_user }}
