@@ -12,13 +12,14 @@ jobs:
       uses: actions/checkout@v3
     
     - name: send latest files
-      uses: sand4rt/ftp-deployer@v1.7
+      uses: milanmk/actions-file-deployer@master
       with:
-        sftp: true
-        host: ${{ secrets.ftp_server }}
-        port: ${{ secrets.ftp_port }}
-        username: ${{ secrets.ftp_user }}
-        password: ${{ secrets.ftp_password }}
-        local_folder: data/ttt/maps/
-        remote_folder: garrysmod/data/ttt/maps/
+        remote-protocol: sftp
+        remote-host: ${{ secrets.ftp_server }}
+        remote-port: ${{ secrets.ftp_port }}
+        remote-user: ${{ secrets.ftp_user }}
+        remote-password: ${{ secrets.ftp_password }}
+        webhook:  ${{ secrets.webhook_url }}
+        local-path: data/ttt/maps/
+        remote-path: garrysmod/data/ttt/maps/
         
