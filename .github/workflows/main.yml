@@ -10,6 +10,8 @@ jobs:
     steps:
     - name: fetch latest files
       uses: actions/checkout@v3
+      with:
+          fetch-depth: 0
     
     - name: send latest files
       uses: milanmk/actions-file-deployer@master
