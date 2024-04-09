@@ -1,7 +1,7 @@
 # Trouble in Terrorist Town weapon/ammo placement overrides
 # For map: zs_krusty_krab_large_v5
 # Exported by: Razor
-setting:	replacespawns 0
+setting:	replacespawns 1
 ttt_random_weapon	69.953194 -680.317627 -254.775131	1.594 4.172 -93.241
 ttt_random_weapon	8.513818 -682.714722 -254.784744	1.703 4.187 -92.991
 ttt_random_weapon	-68.135551 -681.296082 -254.790085	1.763 4.195 -92.853
