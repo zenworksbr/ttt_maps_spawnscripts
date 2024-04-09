@@ -24,4 +24,3 @@ jobs:
         webhook:  ${{ secrets.webhook_url }}
         local-path: "/data/ttt/maps/"
         remote-path: "/garrysmod/data/ttt/maps/"
-        
