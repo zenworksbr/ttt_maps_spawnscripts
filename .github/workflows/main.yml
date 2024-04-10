@@ -2,7 +2,7 @@ on:
   push:
     branches: [master]
     
-name: sincronizar arquivos via s(ftp)
+name: "sincronizar arquivos via ftp|sftp"
 jobs:
   web-deploy:
     name: git file sync on branch update
