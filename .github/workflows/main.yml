@@ -16,10 +16,10 @@ jobs:
     - name: send latest files
       uses: milanmk/actions-file-deployer@master
       with:
-        remote-protocol: "ftp"
-        remote-host: ${{ secrets.ftp_server }}
-        remote-port: ${{ secrets.ftp_port }}
-        remote-user: ${{ secrets.ftp_user }}
-        remote-password: ${{ secrets.ftp_password }}
+        remote-protocol: "sftp"
+        remote-host: ${{ secrets.DEV_FTP_HOST }}
+        remote-port: ${{ secrets.DEV_FTP_PORT }}
+        remote-user: ${{ secrets.DEV_FTP_USER }}
+        remote-password: ${{ secrets.DEV_FTP_PASS }}
         local-path: "/data/ttt/maps/"
         remote-path: "/garrysmod/data/ttt/maps/"
