@@ -21,5 +21,5 @@ jobs:
         remote-port: ${{ secrets.DEV_FTP_PORT }}
         remote-user: ${{ secrets.DEV_FTP_USER }}
         remote-password: ${{ secrets.DEV_FTP_PASS }}
-        local-path: "/data/ttt/maps/"
-        remote-path: "/garrysmod/data/ttt/maps/"
+        local-path: "data/ttt/maps/"
+        remote-path: "garrysmod/data/ttt/maps/"
