@@ -16,6 +16,7 @@ jobs:
     - name: send latest files
       uses: milanmk/actions-file-deployer@master
       with:
+        sync: "full"
         remote-protocol: "sftp"
         remote-host: ${{ secrets.DEV_FTP_HOST }}
         remote-port: ${{ secrets.DEV_FTP_PORT }}
