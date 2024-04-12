@@ -1,0 +1,27 @@
+on: 
+  push:
+    branches: [master] # mirror
+  # schedule:
+  #  cron: '5 0 * * *'
+    
+name: "enviar arquivos para ambiente principal"
+jobs:
+  web-deploy:
+    name: git file sync on branch update
+    runs-on: ubuntu-latest
+    steps:
+    - name: fetch latest files
+      uses: actions/checkout@v3
+      with:
+          fetch-depth: 0
+    
+    - name: sincronizar arquivos
+      uses: milanmk/actions-file-deployer@master
+      with:
+        remote-protocol: "ftp"
+        remote-host: ${{ secrets.PROD_FTP_HOST }}
+        remote-port: ${{ secrets.PROD_FTP_PORT }}
+        remote-user: ${{ secrets.PROD_FTP_USER }}
+        remote-password: ${{ secrets.PROD_FTP_PASS }}
+        local-path: "data/ttt/maps/"
+        remote-path: "/garrysmod/data/ttt/maps/"

@@ -1,8 +1,8 @@
 on: 
   push:
-    branches: [master]
+    branches: [dev]
     
-name: "sincronizar arquivos via ftp|sftp"
+name: "enviar arquivos para ambiente dev"
 jobs:
   web-deploy:
     name: git file sync on branch update
@@ -13,10 +13,9 @@ jobs:
       with:
           fetch-depth: 0
     
-    - name: send latest files
+    - name: sincronizar arquivos
       uses: milanmk/actions-file-deployer@master
       with:
-        sync: "full"
         remote-protocol: "sftp"
         remote-host: ${{ secrets.DEV_FTP_HOST }}
         remote-port: ${{ secrets.DEV_FTP_PORT }}
